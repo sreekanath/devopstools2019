@@ -1,0 +1,21 @@
+ubuntu
+$curl -LO https://github.com/prometheus/prometheus/releases/download/v2.9.2/prometheus-2.9.2.linux-amd64.tar.gz
+$sha256sum prometheus-2.9.2.linux-amd64.tar.gz
+$ ls -ltr
+$cd prometheus-2.9.2.linux-amd64
+$ls -ltr
+$ sudo cp prometheus-2.9.2.linux-amd64/prometheus /usr/local/bin
+$ sudo cp prometheus-2.9.2.linux-amd64/promtool /usr/local/bin/
+$  
+$ ./prometheus --config.file=prometheus.yml &
+command used to run in the backgroung &
+$ you want to add any target servers we can add in prometheus.yml file 
+$   ./prometheus --config.file=prometheus.yml &  --command use to run prometheus in background
+--> serverdnsname:9090  -- we can get prometheus dashbaord
+--> serverdnsname:9090/graphs --we can server graph logs
+-->  serverdnsname:9090/metrics  --we can get metrics logs   ---it is go languagae which undersand by metrics
+
+
+ex: to monitor
+promhttp_metric_handler_requests_total
+
